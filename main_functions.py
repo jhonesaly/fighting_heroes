@@ -41,9 +41,8 @@ def random_hero():
 def random_hero_league(hero_quantity):
     hero_league = []
     for i in range(hero_quantity):
-        hero_name = random_name()
-        hero_xp = random_number(1,11000)
-        hero_league.append([hero_name, hero_xp, 0, 0])
+        hero = random_hero()
+        hero_league.append(hero)
 
     return hero_league
 
