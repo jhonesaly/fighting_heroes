@@ -1,6 +1,6 @@
 # Projeto: Fighting Heroes
 
-Este projeto ...
+Este projeto simula um campeonato entre heróis gerados aleatoriamente, onde cada herói possui características distintas como idade, profissão e experiência (XP). A simulação permite a visualização de embates entre os heróis, e ao final, é possível visualizar o ranking dos heróis baseado em suas vitórias e derrotas.
 
 
 
@@ -37,19 +37,33 @@ Ao final deve se exibir uma mensagem:
 
 ```
 
-## Estrutura de Arquivos
+## Estrutura do Projeto
 
+O projeto está estruturado em três arquivos principais:
 
+- `main.py`: Este é o arquivo principal que executa a simulação do campeonato.
+- `main_functions.py`: Contém as funções auxiliares necessárias para a simulação.
+- `main_classes.py`: Define a classe `Hero`, que representa um herói no campeonato.
+- `test_main_functions.py`: Contém testes unitários para validar a lógica implementada nas funções auxiliares.
 
 ## Como Executar
 
-1. Certifique-se de ter Python 3 instalado em seu sistema.
-2. Execute o arquivo `main.py` usando o comando `python main.py`.
-3. Siga as instruções na tela para interagir com o programa.
+1. Certifique-se de ter o Python instalado em sua máquina.
+2. Clone o repositório ou faça o download dos arquivos.
+3. Abra o terminal e navegue até o diretório onde os arquivos estão localizados.
+4. Execute o comando `python main.py` para iniciar a simulação.
 
 ## Funcionalidades
 
+- **Criação de Heróis**: Heróis são gerados aleatoriamente com nome, idade, profissão e experiência (XP).
+- **Campeonato**: Os heróis competem entre si em um campeonato, onde as vitórias e derrotas são registradas.
+- **Classificação**: Ao final, é possível visualizar a classificação dos heróis baseada em suas vitórias e derrotas.
+- **Interatividade**: O usuário pode escolher um herói da lista para ver suas informações, ou adicionar um novo herói ao campeonato.
 
 ## Testes
 
 Para executar os testes unitários, use o comando `python -m unittest test_main_functions.py`.
+
+## Contribuições
+
+Este é um projeto aberto, e contribuições são bem-vindas. Se você encontrar um bug ou tem uma ideia para uma nova funcionalidade, sinta-se à vontade para abrir uma issue ou enviar um pull request.
