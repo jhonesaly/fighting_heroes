@@ -5,35 +5,38 @@ from main_classes import Hero
 
 # Configurações iniciais
 
-print("Bem-vindo ao machmaking dos heróis!")
-herois = random_hero_league(20)
-hero_championship(herois, 4)
+os.system('cls')
+print("Bem-vindo ao campeonato dos heróis!\n")
+input("Pressione 'enter' para começar a simulação do campeonato. ")
 
 while True:
 
-    os.system('cls')
+    herois = random_hero_league(20)
+    hero_championship(herois, 3)
 
     # Listando heróis
-    print("Esses são os heróis da liga: ")
+    print("Esses é o ranking da liga: ")
     show_heroes(herois)
 
     # Input de herói escolhido
-    heroi_escolhido = input("Por favor, escolha um herói da lista para saber a sua categoria: ")
+    heroi_escolhido = input("Por favor, escolha um herói da lista para saber suas informações: ")
 
     # Verifica se escolha está na lista
 
     heroi_na_lista = False
 
     for heroi in herois:
-        if heroi[0] == heroi_escolhido:
+        if heroi.name == heroi_escolhido:
             heroi_na_lista = True
-            vitorias_heroi = heroi[2]
-            rating_heroi = rating_info(heroi[2]-heroi[3])
+            vitorias_heroi = heroi.victories
+            rating_heroi = rating_info(heroi.victories-heroi.defeats)
+            nivel_heroi = lvl_info(heroi.xp)
             break
 
     if heroi_na_lista:
         # Mostrando categoria do herói
-        print(f"O Herói tem de saldo de **{vitorias_heroi}** está no nível de **{rating_heroi}**")
+        print(f"O Herói de nome **{heroi_escolhido}** está no nível **{nivel_heroi}**")
+        print(f"O Herói tem de saldo de **{vitorias_heroi}** vitórias e está na liga **{rating_heroi}**")
 
     else:
         print("Esse herói não está na lista.")
@@ -55,4 +58,3 @@ while True:
 
     else:
         print("Continuando...")
-
