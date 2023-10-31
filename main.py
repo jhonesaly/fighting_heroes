@@ -1,6 +1,7 @@
 # Base da aplicação
 import os
 from main_functions import *
+from main_classes import Hero
 
 # Configurações iniciais
 

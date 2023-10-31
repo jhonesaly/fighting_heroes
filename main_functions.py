@@ -1,7 +1,7 @@
 # Funções da aplicação
 
 import random
-
+from main_classes import Hero
 
 def random_name():
     consoantes = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'z']
