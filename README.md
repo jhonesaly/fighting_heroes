@@ -2,7 +2,7 @@
 
 Este projeto simula um campeonato entre heróis gerados aleatoriamente, onde cada herói possui características distintas como idade, profissão e experiência (XP). A simulação permite a visualização de embates entre os heróis, e ao final, é possível visualizar o ranking dos heróis baseado em suas vitórias e derrotas.
 
-
+Diferente dos outros projetos, agora os heróis são objetos da classe Hero, com métodos próprios e atributos que são utilizados nas funções, que foram todas adaptadas.
 
 O projeto é baseado no desafio da plataforma Dio que pede o seguinte:
 
