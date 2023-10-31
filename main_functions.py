@@ -74,17 +74,33 @@ def show_heroes(hero_league):
 
 
 def hero_match(hero_1, hero_2):
-    hero_total_xp = hero_1[1] + hero_2[1]
-    match_number = random_number(1,hero_total_xp)
+    prevalence = {
+        'soldado': 'ladino',
+        'ladino': 'mago',
+        'mago': 'soldado'
+    }
+    
+    hero_1_xp = hero_1.xp
+    hero_2_xp = hero_2.xp
 
-    if match_number < hero_1[1]:
-        hero_1[2] += 1
-        hero_2[3] += 1
-        return hero_1[0]
+    if prevalence[hero_1.profession] == hero_2.profession:
+        hero_1_xp *= 2
+        hero_2_xp /= 2
+    elif prevalence[hero_2.profession] == hero_1.profession:
+        hero_2_xp *= 2
+        hero_1_xp /= 2
+
+    hero_total_xp = hero_1_xp + hero_2_xp
+    match_number = random_number(1,int(hero_total_xp))
+
+    if match_number < hero_1_xp:
+        hero_1.victories += 1
+        hero_2.defeats += 1
+        return hero_1.name
     else:
-        hero_2[2] += 1
-        hero_1[3] += 1
-        return hero_2[0]
+        hero_2.victories += 1
+        hero_1.defeats += 1
+        return hero_2.name
 
 def hero_championship(hero_league, seasons=1):
     for k in range(seasons):
