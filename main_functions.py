@@ -35,7 +35,7 @@ def random_hero():
     hero_xp = random_number(1, 11000)
     hero_profession = random_profession()
     hero_age = random_number(20, 70)
-    hero = Hero(hero_name, hero_age, hero_profession, hero_xp, 0, 0)
+    hero = Hero(hero_name, hero_age, hero_profession, hero_xp)
     return hero
 
 def random_hero_league(hero_quantity):

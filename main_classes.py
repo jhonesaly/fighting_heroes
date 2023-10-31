@@ -1,12 +1,12 @@
 
 class Hero:
-    def __init__(self, name, age, profession, xp, victories, defeats):
+    def __init__(self, name, age, profession, xp):
         self.name = name
         self.age = age
         self.profession = profession
         self.xp = xp
-        self.victories = victories
-        self.defeats = defeats
+        self.victories = 0
+        self.defeats = 0
 
     def attack(self):
         attacks = {
