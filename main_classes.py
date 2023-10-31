@@ -10,9 +10,18 @@ class Hero:
 
     def attack(self):
         attacks = {
-            'mago': 'usou cajado',
-            'soldado': 'usou espada',
-            'ladino': 'usou adaga'
+            'mago': 'cajado',
+            'soldado': 'espada',
+            'ladino': 'adaga'
         }
         attack = attacks.get(self.profession, 'atacou')
-        print(f'o {self.profession} atacou usando {attack}')
+        print(f'o {self.profession} {self.name} atacou usando {attack}')
+
+    def defense(self):
+        defenses = {
+            'mago': 'barreira',
+            'soldado': 'escudo',
+            'ladino': 'esquiva'
+        }
+        defense = defenses.get(self.profession, 'defendeu')
+        print(f'{self.profession} {self.name} defendeu usando {defense}')

@@ -110,13 +110,22 @@ def hero_match(hero_1, hero_2):
     hero_total_xp = hero_1_xp + hero_2_xp
     match_number = random_number(1,int(hero_total_xp))
 
+    print(f'Disputa: {hero_1.name} X {hero_2.name}')
+
+    hero_1.attack()
+    hero_2.defense()
+    hero_2.attack()
+    hero_1.defense()
+
     if match_number < hero_1_xp:
         hero_1.victories += 1
         hero_2.defeats += 1
+        print(f'Vencedor:{hero_1.name}\n')
         return hero_1.name
     else:
         hero_2.victories += 1
         hero_1.defeats += 1
+        print(f'Vencedor:{hero_2.name}\n')
         return hero_2.name
 
 
