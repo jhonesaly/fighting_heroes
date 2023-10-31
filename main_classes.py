@@ -11,7 +11,7 @@ class Hero:
     def attack(self):
         attacks = {
             'mago': 'usou cajado',
-            'guerreiro': 'usou espada',
+            'soldado': 'usou espada',
             'ladino': 'usou adaga'
         }
         attack = attacks.get(self.profession, 'atacou')

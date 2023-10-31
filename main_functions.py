@@ -25,7 +25,7 @@ def random_number(min_number, max_number):
 
 
 def random_profession():
-    professions = ['mago', 'guerreiro', 'ladino']
+    professions = ['mago', 'soldado', 'ladino']
     profession = random.choice(professions)
     return profession
 
@@ -67,9 +67,10 @@ def lvl_info(hero_xp):
 
 
 def show_heroes(hero_league):
-    print("Hero\tXP\tVictory\tDefeat\tRatio")
+    print("Hero\tOfício\tXP\tVictory\tDefeat\tRatio")
     for hero in hero_league:
-        print(f"{hero[0]}\t{hero[1]}\t{hero[2]}\t{hero[3]}\t{hero[2]-hero[3]}")
+        print(f"{hero.name}\t{hero.profession}\t{hero.xp}\t{hero.victories}\t{hero.defeats}\t{hero.victories-hero.defeats}")
+
 
 
 def hero_match(hero_1, hero_2):
@@ -116,4 +117,5 @@ if __name__ == '__main__':
     import os
     os.system('cls')
 
-    print(random_hero())
+    hero_league = random_hero_league(20)
+    show_heroes(hero_league)
