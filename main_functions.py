@@ -24,6 +24,12 @@ def random_number(min_number, max_number):
     return random.randint(min_number, max_number)
 
 
+def random_profession():
+    professions = ['mago', 'guerreiro', 'ladino']
+    profession = random.choice(professions)
+    return profession
+
+
 def random_hero_league(hero_quantity):
     hero_league = []
     for i in range(hero_quantity):
@@ -102,3 +108,5 @@ if __name__ == '__main__':
 
     import os
     os.system('cls')
+
+    print(random_profession())
